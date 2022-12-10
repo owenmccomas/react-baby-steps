@@ -1,4 +1,4 @@
-let hexCode = [
+export let hexCode = [
     {
       color: "indian red",
       code: {

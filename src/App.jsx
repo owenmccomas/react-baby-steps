@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { hexCode } from './assets/colors';
+import { moreColors } from './assets/moreColors';
 
 const colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
 		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
@@ -21,7 +23,9 @@ function App() {
       )
     }
     return (
-      <div className="App" style={{backgroundColor: colorArray[Math.ceil(Math.random() * colorArray.length)]}}>
+      // <div className="App" style={{backgroundColor: moreColors[Math.ceil(Math.random() * colorArray.length)].code.hex}}>
+        <div className="App" style={{backgroundColor: hexCode[Math.ceil(Math.random() * colorArray.length)].code.hex}}>
+       {/* <div className="App" style={{backgroundColor: colorArray[Math.ceil(Math.random() * colorArray.length)]}}> */}
       <button onClick={colorSwap}>Change Color</button>
     </div>
   )
